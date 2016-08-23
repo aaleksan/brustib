@@ -11,7 +11,7 @@ angular.module('brustib.times', ['ngRoute'])
 
 .controller('TimesCtrl', ['$scope', '$http', function($scope, $http) {
 
-  $http.get('http://m.stib.be/api/getwaitingtimes.php?1=1&line=92&mode=M&iti=2&halt=6420&lang=en').success(function(data){
+  $http.get('http://m.stib.be/api/getlinesnew.php').success(function(data){
     console.log(data);
     $scope.times = data;
   });
